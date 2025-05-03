@@ -739,7 +739,7 @@ GameObject:
   - component: {fileID: 318757854}
   - component: {fileID: 318757855}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Dot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1178,7 +1178,7 @@ GameObject:
   - component: {fileID: 855338022}
   - component: {fileID: 855338023}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Dot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1298,6 +1298,50 @@ MonoBehaviour:
   off: {r: 1, g: 1, b: 1, a: 1}
   on: {r: 0, g: 0, b: 0, a: 1}
   image: {fileID: 954434975}
+--- !u!1 &880071075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 880071077}
+  - component: {fileID: 880071076}
+  m_Layer: 0
+  m_Name: Comm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &880071076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880071075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47fb6778efd304449f09c1d6b33e681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decision: 0
+--- !u!4 &880071077
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880071075}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 736.11816, y: 301.4206, z: -87.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &954434973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1602,7 +1646,7 @@ GameObject:
   - component: {fileID: 1181385636}
   - component: {fileID: 1181385637}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Dot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1683,7 +1727,7 @@ GameObject:
   - component: {fileID: 1187451804}
   - component: {fileID: 1187451805}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Dot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2821,7 +2865,7 @@ GameObject:
   - component: {fileID: 1539217412}
   - component: {fileID: 1539217413}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Dot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3388,7 +3432,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stims: []
   stimulii: {fileID: 1743938262}
+  stimulusTime: 4
+  restTime: 3
   startButton: {fileID: 1776164227}
+  communicator: {fileID: 880071076}
 --- !u!4 &1731865669
 Transform:
   m_ObjectHideFlags: 0
@@ -3582,7 +3629,7 @@ GameObject:
   - component: {fileID: 1825488314}
   - component: {fileID: 1825488315}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Dot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3843,7 +3890,7 @@ GameObject:
   - component: {fileID: 2049633920}
   - component: {fileID: 2049633921}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Dot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3924,7 +3971,7 @@ GameObject:
   - component: {fileID: 2102227501}
   - component: {fileID: 2102227502}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Dot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

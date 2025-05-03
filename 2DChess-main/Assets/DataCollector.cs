@@ -20,8 +20,12 @@ public class DataCollector : MonoBehaviour
     private float bottomHandY = -2.02f;
     float[] horizontalXPos = { -4.29f, -3.3f, -2.24f, -1.21f, -0.25f, 0.78f, 1.76f, 2.81f };
 
-
     public Button startButton;
+
+    Color selected = new Color(0f, 1f, 0f, 1f);
+    Color notSelected = new Color(1f, 0f, 0f, 1f);
+
+    [SerializeField] private DataCommunicate communicator;
 
 
     // Start is called before the first frame update
@@ -55,29 +59,39 @@ public class DataCollector : MonoBehaviour
 
 
 
-
-
     IEnumerator Selection() {
+        int selectedRow = Random.Range(1, 9); 
+        int selectedCol = Random.Range(1, 9);
 
         // Set to vertical positions
         SetVerticalPositions();
 
+        // Set the selected row
+        ResetColors();
+        SelectStimulusColor(stims[selectedRow-1].gameObject, false);
+        yield return new WaitForSeconds(restTime);
+
         // Blink for rows
+        communicator.SendMessageToPython("3"+selectedRow);
         StartBlink();
         yield return new WaitForSeconds(stimulusTime);
         StopBlink();
 
         // Rest
         yield return new WaitForSeconds(restTime);
-        SetHorizontalPositions(); 
+        SetHorizontalPositions();
+        ResetColors();
+        SelectStimulusColor(stims[selectedCol-1].gameObject, false);
         yield return new WaitForSeconds(restTime);
 
         // Blink for columns
+        communicator.SendMessageToPython("9"+selectedCol);
         StartBlink();
         yield return new WaitForSeconds(stimulusTime);
         StopBlink();
 
         SetVerticalPositions();
+        ResetColors();
         startButton.interactable = true;
         startButton.gameObject.SetActive(true);
     }
@@ -119,6 +133,25 @@ public class DataCollector : MonoBehaviour
                 tempY = bottomHandY;
             }
             stims[i].gameObject.transform.localPosition = new Vector3(horizontalXPos[i], tempY, 0f); // x=2, y=3, z=0
+        }
+    }
+
+
+    private void SelectStimulusColor(GameObject stim, bool isRed) {
+        Transform child = stim.transform.Find("Dot");
+        SpriteRenderer img = child.GetComponent<SpriteRenderer>();
+
+        if (isRed){
+            img.color = notSelected;
+        }
+        else{
+            img.color = selected;
+        }
+    }
+
+    private void ResetColors() {
+        for (int i = 0; i < 8; ++i) {
+            SelectStimulusColor(stims[i].gameObject, true);
         }
     }
 }
