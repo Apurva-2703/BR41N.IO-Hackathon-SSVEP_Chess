@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 58203774}
   - component: {fileID: 58203775}
   m_Layer: 0
-  m_Name: stim1 (4)
+  m_Name: stim5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -279,7 +279,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58203773}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.49, y: 1.93, z: -75.30176}
+  m_LocalPosition: {x: -5.5, y: 1.93, z: -75.30176}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 107816733}
@@ -1264,7 +1264,7 @@ GameObject:
   - component: {fileID: 867375804}
   - component: {fileID: 867375805}
   m_Layer: 0
-  m_Name: stim1 (7)
+  m_Name: stim8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1278,7 +1278,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 867375803}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.94, y: -0.95, z: -75.30176}
+  m_LocalPosition: {x: 3.9, y: -0.95, z: -75.30176}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 954434974}
@@ -1395,7 +1395,7 @@ GameObject:
   - component: {fileID: 990691125}
   - component: {fileID: 990691126}
   m_Layer: 0
-  m_Name: stim1 (6)
+  m_Name: stim7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1409,7 +1409,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 990691124}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.49, y: -0.06, z: -75.30176}
+  m_LocalPosition: {x: -5.5, y: -0.06, z: -75.30176}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1122730699}
@@ -1769,7 +1769,7 @@ GameObject:
   - component: {fileID: 1193419552}
   - component: {fileID: 1193419553}
   m_Layer: 0
-  m_Name: stim1 (5)
+  m_Name: stim6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1783,7 +1783,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193419551}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.91, y: 0.98, z: -75.30176}
+  m_LocalPosition: {x: 3.9, y: 0.98, z: -75.30176}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1088262816}
@@ -2345,7 +2345,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381880391}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.49, y: 6.02, z: -75.30176}
+  m_LocalPosition: {x: -5.5, y: 6.02, z: -75.30176}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1662314720}
@@ -2775,7 +2775,7 @@ GameObject:
   - component: {fileID: 1530501509}
   - component: {fileID: 1530501510}
   m_Layer: 0
-  m_Name: stim1 (3)
+  m_Name: stim4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2789,7 +2789,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1530501508}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.83, y: 3.02, z: -75.30176}
+  m_LocalPosition: {x: 3.9, y: 3.02, z: -75.30176}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1618207522}
@@ -3361,6 +3361,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1731865667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1731865669}
+  - component: {fileID: 1731865668}
+  m_Layer: 0
+  m_Name: Data Collector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1731865668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731865667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 409b644c9ce11c041bcd68432d91123b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stim1: {fileID: 1381880393}
+  stim2: {fileID: 2002996174}
+  stim3: {fileID: 2132243204}
+  stim4: {fileID: 1530501510}
+  stim5: {fileID: 58203775}
+  stim6: {fileID: 1193419553}
+  stim7: {fileID: 990691126}
+  stim8: {fileID: 867375805}
+--- !u!4 &1731865669
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731865667}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.7207695, y: -0.3727024, z: 2442.5874}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1743938261
 GameObject:
   m_ObjectHideFlags: 0
@@ -3371,7 +3422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1743938262}
   m_Layer: 0
-  m_Name: Stimii
+  m_Name: Stimulii
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3491,7 +3542,7 @@ GameObject:
   - component: {fileID: 2002996173}
   - component: {fileID: 2002996174}
   m_Layer: 0
-  m_Name: stim1 (1)
+  m_Name: stim2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3505,7 +3556,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2002996172}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.96, y: 4.94, z: -75.30176}
+  m_LocalPosition: {x: 3.9, y: 4.94, z: -75.30176}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1518320476}
@@ -3914,7 +3965,7 @@ GameObject:
   - component: {fileID: 2132243203}
   - component: {fileID: 2132243204}
   m_Layer: 0
-  m_Name: stim1 (2)
+  m_Name: stim3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3928,7 +3979,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132243202}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.49, y: 3.84, z: -75.30176}
+  m_LocalPosition: {x: -5.5, y: 3.84, z: -75.30176}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 754663080}
