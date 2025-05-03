@@ -26,6 +26,8 @@ class EEGDataCollector:
         self.timestamp_channel = self.board.get_timestamp_channel(self.board_id) # Timestamp channel
         self.marker_channel = self.board.get_marker_channel(self.board_id) # Marker channel for synchronization
         self.sampling_rate = BoardShim.get_sampling_rate(self.board_id) # Hz
+        
+        
 
         # Start recording/collecting data
         self.board.prepare_session()

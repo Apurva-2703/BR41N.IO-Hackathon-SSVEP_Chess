@@ -72,10 +72,13 @@ public class DataCollector : MonoBehaviour
         yield return new WaitForSeconds(restTime);
 
         // Blink for rows
-        communicator.SendMessageToPython("3"+selectedRow);
+        // communicator.SendMessageToPython("3"+selectedRow);
+        communicator.SendMessageToPython("START");
         StartBlink();
         yield return new WaitForSeconds(stimulusTime);
         StopBlink();
+        communicator.SendMessageToPython("STOP");
+        Debug.Log(communicator.decision);
 
         // Rest
         yield return new WaitForSeconds(restTime);
@@ -85,10 +88,13 @@ public class DataCollector : MonoBehaviour
         yield return new WaitForSeconds(restTime);
 
         // Blink for columns
-        communicator.SendMessageToPython("9"+selectedCol);
+        // communicator.SendMessageToPython("9"+selectedCol);
+        communicator.SendMessageToPython("START");
         StartBlink();
         yield return new WaitForSeconds(stimulusTime);
         StopBlink();
+        communicator.SendMessageToPython("STOP");
+        Debug.Log(communicator.decision);
 
         SetVerticalPositions();
         ResetColors();

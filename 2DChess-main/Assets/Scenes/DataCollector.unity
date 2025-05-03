@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5c918bbf9a3f4a83a0da886f5ae03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 15
+  frequency: 12
   phaseShift: 0
   off: {r: 1, g: 1, b: 1, a: 1}
   on: {r: 0, g: 0, b: 0, a: 1}
@@ -1293,8 +1293,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5c918bbf9a3f4a83a0da886f5ae03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 22.5
-  phaseShift: 0
+  frequency: 15.5
+  phaseShift: 1
   off: {r: 1, g: 1, b: 1, a: 1}
   on: {r: 0, g: 0, b: 0, a: 1}
   image: {fileID: 954434975}
@@ -1468,7 +1468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5c918bbf9a3f4a83a0da886f5ae03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 20
+  frequency: 15
   phaseShift: 0
   off: {r: 1, g: 1, b: 1, a: 1}
   on: {r: 0, g: 0, b: 0, a: 1}
@@ -1842,8 +1842,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5c918bbf9a3f4a83a0da886f5ae03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 17.5
-  phaseShift: 0
+  frequency: 12.5
+  phaseShift: 1
   off: {r: 1, g: 1, b: 1, a: 1}
   on: {r: 0, g: 0, b: 0, a: 1}
   image: {fileID: 1088262817}
@@ -2404,7 +2404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5c918bbf9a3f4a83a0da886f5ae03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 5
+  frequency: 7
   phaseShift: 0
   off: {r: 1, g: 1, b: 1, a: 1}
   on: {r: 0, g: 0, b: 0, a: 1}
@@ -2849,8 +2849,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5c918bbf9a3f4a83a0da886f5ae03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 12.5
-  phaseShift: 0
+  frequency: 10.5
+  phaseShift: 1
   off: {r: 1, g: 1, b: 1, a: 1}
   on: {r: 0, g: 0, b: 0, a: 1}
   image: {fileID: 1618207523}
@@ -3745,7 +3745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frequency: 7.5
-  phaseShift: 0
+  phaseShift: 1
   off: {r: 1, g: 1, b: 1, a: 1}
   on: {r: 0, g: 0, b: 0, a: 1}
   image: {fileID: 1518320477}
