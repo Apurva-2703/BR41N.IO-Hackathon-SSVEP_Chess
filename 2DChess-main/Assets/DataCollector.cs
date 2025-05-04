@@ -80,6 +80,8 @@ public class DataCollector : MonoBehaviour
         communicator.SendMessageToPython("STOP");
         Debug.Log(communicator.decision);
 
+        //TODO: SAVE SELECTED ROW
+
         // Rest
         yield return new WaitForSeconds(restTime);
         SetHorizontalPositions();
@@ -100,6 +102,8 @@ public class DataCollector : MonoBehaviour
         ResetColors();
         startButton.interactable = true;
         startButton.gameObject.SetActive(true);
+
+        //TODO: SAVE SELECTED COLUMN
     }
 
 

@@ -19,7 +19,7 @@ class EEGController:
         else:
             # Setting up the board
             self.params = BrainFlowInputParams()
-            self.params.serial_number = 'UN-2023.02.30'
+            self.params.serial_number = 'UN-2022.04.22'
             self.board_id = BoardIds.UNICORN_BOARD
             
         self.board = BoardShim(self.board_id, self.params)
@@ -40,8 +40,8 @@ class EEGController:
         self.active = True
         
         # Filter properties
-        self.cutoff_high = 6
-        self.cutoff_low = 50
+        self.cutoff_high = 2
+        self.cutoff_low = 30
         
         # SSVEP Properties
         self.epoch_timelength = 4 # Seconds

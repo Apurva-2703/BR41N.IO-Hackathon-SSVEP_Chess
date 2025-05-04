@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Chess.Game {
 	public class HumanPlayer : Player {
@@ -23,12 +24,19 @@ namespace Chess.Game {
 			this.board = board;
 		}
 
+		[SerializeField] public InputField start;
+		[SerializeField] public InputField end;
+
 		public override void NotifyTurnToMove () {
 
 		}
 
 		public override void Update () {
 			HandleInput ();
+
+			if (Input.GetKeyDown (KeyCode.F)) {
+				// OnMoveChosen(new Move(int.Parse(start.text), int.Parse(end.text)));
+			}
 		}
 
 		void HandleInput () {
