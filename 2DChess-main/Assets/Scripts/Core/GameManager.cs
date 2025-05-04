@@ -41,6 +41,9 @@ namespace Chess.Game {
 		List<Move> gameMoves;
 		BoardUI boardUI;
 
+		[SerializeField] public InputField start;
+		[SerializeField] public InputField end;
+
 		public ulong zobristDebug;
 		public Board board { get; private set; }
 		Board searchBoard; // Duplicate version of board used for ai search

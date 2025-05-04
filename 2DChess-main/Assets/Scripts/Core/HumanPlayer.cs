@@ -24,8 +24,10 @@ namespace Chess.Game {
 			this.board = board;
 		}
 
-		[SerializeField] public InputField start;
-		[SerializeField] public InputField end;
+		private bool startBool = false;
+		public InputField rowText;
+		public InputField colText;
+
 
 		public override void NotifyTurnToMove () {
 
@@ -34,25 +36,39 @@ namespace Chess.Game {
 		public override void Update () {
 			HandleInput ();
 
+			if(startBool == false) {
+				startBool = true;
+				rowText = GameObject.Find("RowText").GetComponent<InputField>();
+        		colText = GameObject.Find("ColText").GetComponent<InputField>();
+			}
+
 			if (Input.GetKeyDown (KeyCode.F)) {
-				// OnMoveChosen(new Move(int.Parse(start.text), int.Parse(end.text)));
+				int row = int.Parse(rowText.text);
+				int col = int.Parse(colText.text);
+				HandlePieceSelection (row, col);
+			}
+
+			if (Input.GetKeyDown (KeyCode.G)) {
+				int row = int.Parse(rowText.text);
+				int col = int.Parse(colText.text);
+				HandlePiecePlacement (row, col);
 			}
 		}
 
 		void HandleInput () {
-			Vector2 mousePos = cam.ScreenToWorldPoint (Input.mousePosition);
+			// Vector2 mousePos = cam.ScreenToWorldPoint (Input.mousePosition);
 
-			if (currentState == InputState.None) {
-				HandlePieceSelection (mousePos);
-			} else if (currentState == InputState.DraggingPiece) {
-				HandleDragMovement (mousePos);
-			} else if (currentState == InputState.PieceSelected) {
-				HandlePointAndClickMovement (mousePos);
-			}
+			// if (currentState == InputState.None) {
+			// 	HandlePieceSelection (mousePos);
+			// } else if (currentState == InputState.DraggingPiece) {
+			// 	HandleDragMovement (mousePos);
+			// } else if (currentState == InputState.PieceSelected) {
+			// 	HandlePointAndClickMovement (mousePos);
+			// }
 
-			if (Input.GetMouseButtonDown (1)) {
-				CancelPieceSelection ();
-			}
+			// if (Input.GetMouseButtonDown (1)) {
+			// 	CancelPieceSelection ();
+			// }
 		}
 
 		void HandlePointAndClickMovement (Vector2 mousePos) {
@@ -153,5 +169,45 @@ namespace Chess.Game {
 				}
 			}
 		}
+
+
+
+
+
+		/*
+		Updated Versions
+		*/
+		void HandlePieceSelection (int row, int col) {
+			Coord tempCord = new Coord(col, row);
+			selectedPieceSquare = tempCord;
+			int index = BoardRepresentation.IndexFromCoord (selectedPieceSquare);
+
+			// If square contains a piece, select that piece for dragging
+			if (Piece.IsColour (board.Square[index], board.ColourToMove)) {
+				boardUI.HighlightLegalMoves (board, selectedPieceSquare);
+				boardUI.SelectSquare (selectedPieceSquare);
+				currentState = InputState.PieceSelected;
+			}
+		}
+
+
+		void HandlePiecePlacement (int row, int col) {
+			Coord targetSquare = new Coord(col, row);
+			if (targetSquare.Equals (selectedPieceSquare)) {
+				boardUI.ResetPiecePosition (selectedPieceSquare);
+				currentState = InputState.None;
+				boardUI.DeselectSquare (selectedPieceSquare);
+			} else {
+				int targetIndex = BoardRepresentation.IndexFromCoord (targetSquare.fileIndex, targetSquare.rankIndex);
+				if (Piece.IsColour (board.Square[targetIndex], board.ColourToMove) && board.Square[targetIndex] != 0) {
+					CancelPieceSelection ();
+					// HandlePieceSelection (row, col);
+				} else {
+					TryMakeMove (selectedPieceSquare, targetSquare);
+				}
+			}
+		}
+
+		
 	}
 }

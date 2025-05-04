@@ -900,7 +900,7 @@ GameObject:
   - component: {fileID: 670340092}
   - component: {fileID: 670340091}
   m_Layer: 5
-  m_Name: Current
+  m_Name: RowText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -990,6 +990,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!114 &670340092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1257,7 +1258,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.55
+  m_fontSize: 36.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2640,7 +2641,7 @@ GameObject:
   - component: {fileID: 1406028797}
   - component: {fileID: 1406028796}
   m_Layer: 5
-  m_Name: Desired
+  m_Name: ColText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2730,6 +2731,7 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+  m_ShouldActivateOnSelect: 1
 --- !u!114 &1406028797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3357,6 +3359,8 @@ MonoBehaviour:
   AIDifficulty: {fileID: 1544843368}
   export: {fileID: 311808649}
   exit: {fileID: 2025065218}
+  start: {fileID: 0}
+  end: {fileID: 0}
   zobristDebug: 0
 --- !u!4 &1544843370
 Transform:
@@ -3570,7 +3574,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Current...
+  m_Text: Column...
 --- !u!222 &1632731054
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3690,6 +3694,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1649329965}
   m_maskType: 0
+  _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
 --- !u!23 &1649329965
@@ -4386,7 +4391,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Desired...
+  m_Text: Row...
 --- !u!222 &2041025729
 CanvasRenderer:
   m_ObjectHideFlags: 0
