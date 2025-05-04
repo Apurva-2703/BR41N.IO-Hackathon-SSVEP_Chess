@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Chess.Game;
 
 public class DataCollector : MonoBehaviour
 {
     public SSVEP_Blink[] stims;
     [SerializeField] public Transform stimulii;
+    [SerializeField] public GameManager gameManager;
+    private HumanPlayer player;
 
     public float stimulusTime = 4;
     public float restTime = 3;
@@ -24,6 +27,7 @@ public class DataCollector : MonoBehaviour
 
     Color selected = new Color(0f, 1f, 0f, 1f);
     Color notSelected = new Color(1f, 0f, 0f, 1f);
+    private bool isSelecting = true;
 
     [SerializeField] private DataCommunicate communicator;
 
@@ -43,6 +47,8 @@ public class DataCollector : MonoBehaviour
         }
 
         SetVerticalPositions();
+        player = gameManager.GetHumanPlayerIntstance();
+        isSelecting = true;
     }
 
 
@@ -68,7 +74,7 @@ public class DataCollector : MonoBehaviour
 
         // Set the selected row
         ResetColors();
-        SelectStimulusColor(stims[selectedRow-1].gameObject, false);
+        // SelectStimulusColor(stims[selectedRow-1].gameObject, false);
         yield return new WaitForSeconds(restTime);
 
         // Blink for rows
@@ -79,6 +85,8 @@ public class DataCollector : MonoBehaviour
         StopBlink();
         communicator.SendMessageToPython("STOP");
         Debug.Log(communicator.decision);
+        yield return new WaitForSeconds(1);
+        selectedRow = 7-communicator.decision;
 
         //TODO: SAVE SELECTED ROW
 
@@ -86,7 +94,7 @@ public class DataCollector : MonoBehaviour
         yield return new WaitForSeconds(restTime);
         SetHorizontalPositions();
         ResetColors();
-        SelectStimulusColor(stims[selectedCol-1].gameObject, false);
+        // SelectStimulusColor(stims[selectedCol-1].gameObject, false);
         yield return new WaitForSeconds(restTime);
 
         // Blink for columns
@@ -96,7 +104,8 @@ public class DataCollector : MonoBehaviour
         yield return new WaitForSeconds(stimulusTime);
         StopBlink();
         communicator.SendMessageToPython("STOP");
-        Debug.Log(communicator.decision);
+        yield return new WaitForSeconds(1);
+        selectedCol = communicator.decision;
 
         SetVerticalPositions();
         ResetColors();
@@ -104,6 +113,8 @@ public class DataCollector : MonoBehaviour
         startButton.gameObject.SetActive(true);
 
         //TODO: SAVE SELECTED COLUMN
+        player.HandleInput(selectedRow, selectedCol);
+        Debug.Log("Selected col " + selectedCol + " Selected Row " + selectedRow);
     }
 
 

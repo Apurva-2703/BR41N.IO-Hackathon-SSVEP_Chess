@@ -332,5 +332,9 @@ namespace Chess.Game {
 			}
 			player.onMoveChosen += OnMoveChosen;
 		}
+
+		public HumanPlayer GetHumanPlayerIntstance() {
+			return (HumanPlayer)whitePlayer;
+		}
 	}
 }

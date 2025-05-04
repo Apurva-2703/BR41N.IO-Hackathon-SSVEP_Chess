@@ -299,10 +299,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5c918bbf9a3f4a83a0da886f5ae03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 12
+  frequency: 12.25
   phaseShift: 0
-  off: {r: 1, g: 1, b: 1, a: 1}
-  on: {r: 0, g: 0, b: 0, a: 1}
+  off: {r: 1, g: 0, b: 0, a: 1}
+  on: {r: 0.08675194, g: 1, b: 0, a: 1}
   image: {fileID: 107816734}
 --- !u!1 &107816732
 GameObject:
@@ -990,7 +990,6 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
-  m_ShouldActivateOnSelect: 1
 --- !u!114 &670340092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1434,10 +1433,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5c918bbf9a3f4a83a0da886f5ae03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 15.5
-  phaseShift: 1
-  off: {r: 1, g: 1, b: 1, a: 1}
-  on: {r: 0, g: 0, b: 0, a: 1}
+  frequency: 15
+  phaseShift: 0.5
+  off: {r: 1, g: 0, b: 0, a: 1}
+  on: {r: 0.08675194, g: 1, b: 0, a: 1}
   image: {fileID: 954434975}
 --- !u!1 &880071075
 GameObject:
@@ -1609,10 +1608,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5c918bbf9a3f4a83a0da886f5ae03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 15
-  phaseShift: 0
-  off: {r: 1, g: 1, b: 1, a: 1}
-  on: {r: 0, g: 0, b: 0, a: 1}
+  frequency: 12
+  phaseShift: 0.5
+  off: {r: 1, g: 0, b: 0, a: 1}
+  on: {r: 0.08675194, g: 1, b: 0, a: 1}
   image: {fileID: 1122730700}
 --- !u!1 &1088262815
 GameObject:
@@ -1983,10 +1982,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5c918bbf9a3f4a83a0da886f5ae03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 12.5
-  phaseShift: 1
-  off: {r: 1, g: 1, b: 1, a: 1}
-  on: {r: 0, g: 0, b: 0, a: 1}
+  frequency: 15
+  phaseShift: 0
+  off: {r: 1, g: 0, b: 0, a: 1}
+  on: {r: 0.08675194, g: 1, b: 0, a: 1}
   image: {fileID: 1088262817}
 --- !u!1 &1197064693
 GameObject:
@@ -2623,10 +2622,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5c918bbf9a3f4a83a0da886f5ae03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 7
+  frequency: 8.57
   phaseShift: 0
-  off: {r: 1, g: 1, b: 1, a: 1}
-  on: {r: 0, g: 0, b: 0, a: 1}
+  off: {r: 1, g: 0, b: 0, a: 1}
+  on: {r: 0.08675194, g: 1, b: 0, a: 1}
   image: {fileID: 1662314721}
 --- !u!1 &1406028794
 GameObject:
@@ -2731,7 +2730,6 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
-  m_ShouldActivateOnSelect: 1
 --- !u!114 &1406028797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3211,10 +3209,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5c918bbf9a3f4a83a0da886f5ae03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 10.5
-  phaseShift: 1
-  off: {r: 1, g: 1, b: 1, a: 1}
-  on: {r: 0, g: 0, b: 0, a: 1}
+  frequency: 9
+  phaseShift: 0.5
+  off: {r: 1, g: 0, b: 0, a: 1}
+  on: {r: 0.08675194, g: 1, b: 0, a: 1}
   image: {fileID: 1618207523}
 --- !u!1 &1539217411
 GameObject:
@@ -3875,6 +3873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stims: []
   stimulii: {fileID: 1743938262}
+  gameManager: {fileID: 1544843369}
   stimulusTime: 4
   restTime: 3
   startButton: {fileID: 1776164227}
@@ -4187,10 +4186,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5c918bbf9a3f4a83a0da886f5ae03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 7.5
-  phaseShift: 1
-  off: {r: 1, g: 1, b: 1, a: 1}
-  on: {r: 0, g: 0, b: 0, a: 1}
+  frequency: 10
+  phaseShift: 0
+  off: {r: 1, g: 0, b: 0, a: 1}
+  on: {r: 0.08675194, g: 1, b: 0, a: 1}
   image: {fileID: 1518320477}
 --- !u!1 &2025065218
 GameObject:
@@ -4766,8 +4765,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5c918bbf9a3f4a83a0da886f5ae03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frequency: 10
-  phaseShift: 0
-  off: {r: 1, g: 1, b: 1, a: 1}
-  on: {r: 0, g: 0, b: 0, a: 1}
+  frequency: 8.57
+  phaseShift: 0.5
+  off: {r: 1, g: 0, b: 0, a: 1}
+  on: {r: 0.08675194, g: 1, b: 0, a: 1}
   image: {fileID: 754663081}

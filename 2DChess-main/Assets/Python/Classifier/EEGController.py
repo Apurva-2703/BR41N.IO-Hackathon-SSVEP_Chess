@@ -19,7 +19,7 @@ class EEGController:
         else:
             # Setting up the board
             self.params = BrainFlowInputParams()
-            self.params.serial_number = 'UN-2022.04.22'
+            self.params.serial_number = 'UN-2023.02.30'
             self.board_id = BoardIds.UNICORN_BOARD
             
         self.board = BoardShim(self.board_id, self.params)
@@ -40,14 +40,14 @@ class EEGController:
         self.active = True
         
         # Filter properties
-        self.cutoff_high = 2
-        self.cutoff_low = 30
+        self.cutoff_high = 6
+        self.cutoff_low = 40
         
         # SSVEP Properties
         self.epoch_timelength = 4 # Seconds
         self.epoch_samples =  self.epoch_timelength * self.sampling_rate
-        self.labels = [7, 7.5, 10, 10.5, 12, 12.5, 15, 15.5]
-        self.labels_phaseshift = [0, 1, 0, 1, 0, 1, 0, 1]
+        self.labels = [8.57, 10, 8.57, 9, 12.25, 15, 12, 15]
+        self.labels_phaseshift = [0, 0, 0.5, 0.5, 0, 0, 0.5, 0.5]
         
         self.reference_signals = []
         for i in range(len(self.labels)):
@@ -64,10 +64,10 @@ class EEGController:
             
     
     def evaluate(self):
-        data = self.board.get_current_board_data(self.epoch_samples)
+        data = self.board.get_current_board_data(int(self.epoch_samples))
         
         epoch_data = []
-        for i in range(4, 8):
+        for i in range(5, 8):
             temp_epoch = np.array(data[i]).flatten() # 6 is the electrode for Oz
             
             temp_epoch = self.butter_highpass_filter(
@@ -83,6 +83,7 @@ class EEGController:
             epoch_data.append(temp_epoch)
         
         features = []
+        print(np.array(epoch_data).shape)
         for i in range(len(self.reference_signals)):
             calculated_coeff = self.coeff(np.array(epoch_data), self.reference_signals[i])
             features.append(calculated_coeff)
@@ -90,7 +91,7 @@ class EEGController:
 
         print(f"Predicted {self.labels[np.argmax(features)]}")
         
-        return self.labels[np.argmax(features)]
+        return np.argmax(features)
     
 
     def close(self):
@@ -154,7 +155,7 @@ class EEGController:
     
     
     def coeff(self, x, y):
-        x_t = np.transpose(x.reshape(4, -1))
+        x_t = np.transpose(x.reshape(3, -1))
         y_t = np.transpose(y)
 
         cca = CCA(n_components=1)
