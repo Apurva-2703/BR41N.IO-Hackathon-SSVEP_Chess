@@ -14,7 +14,7 @@ This project was developed during the **Br41n.io Hackathon** as a proof-of-conce
 - The user’s gaze at a flickering point corresponds to a specific `(x, y)` coordinate, used to select and move pieces.
 - Modified Unity C# scripts (primarily `Move.cs`) to allow EEG-based selection input.
 
-## 🧠 Hardware Used
+## 🧢 Hardware Used
 We used the **g.tec Unicorn Hybrid Black** — a wireless 8-channel EEG system — for signal acquisition.  
 Key features:
 - Dry/Wet electrodes - we used conductive gel to enhance signal and reduce signal impedance.
@@ -49,14 +49,16 @@ Key features:
 - Participated in classification tests and debugging.
 - Documented architecture and implementation.
 
-Special thanks to [@aaronjuma], who implemented the CCA pipeline and led the signal classification logic, and  [@Keerti25], who helped design `project_analysis.ipynb` to test the IT-CCA accuracy and the final presentation for this hackathon.
+Special thanks to [@aaronjuma], who integrated SSVEP stimuli, implemented the CCA pipeline, led the signal classification logic, and demoed the final project. Also, thanks to  [@Keerti25], who helped design `project_analysis.ipynb` to test the IT-CCA accuracy and the final presentation for this hackathon.
 
 ---
+## 🎥 Demo
+[Click here to watch the demo video](https://drive.google.com/file/d/1uoM65fZPW8lixnuws7O-lU8vToFfTe4I/view?usp=drive_link)
+- The video shows a user playing against an AI by controlling the white chess pieces via SSVEP responses. 
 
 ## 🏁 Notes
 This was built in ~24 hours during the Br41n.io hackathon and serves as a functional prototype for EEG-controlled chess via SSVEP.  
-
---
+[Click here to see the certificate](https://drive.google.com/file/d/1c88yLzXYyNa-W4nzBSYccEV2BPafWuUj/view?usp=drive_link)
 
 ## Citations
 1. Nakanishi M, Wang Y, Wang YT, Jung TP. A Comparison Study of Canonical Correlation Analysis Based Methods for Detecting Steady-State Visual Evoked Potentials. PLoS One. 2015 Oct 19;10(10):e0140703. doi: 10.1371/journal.pone.0140703. PMID: 26479067; PMCID: PMC4610694.
